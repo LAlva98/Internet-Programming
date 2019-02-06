@@ -2,28 +2,59 @@
 <html>
     <head>
         <style>
-            main,header,.content,section,search, article, aside,footer{
-               display: inline;
+        
+         header{
+                display: flex; 
+                height: 200px;
+                width:100px;
+                margin: center;
             }
-            /*.flex-container {*/
-            /*  display: flex;*/
-            /*  flex-direction: column;*/
-            /*}*/
+            
+            main,section, aside,footer,article{
+               display: in-line;
+               padding-right:100px;
+            }
+            
+            #search{
+                display: flex; 
+                height: 30px;
+                width:30px;
+            }
+            button img{
+                height: 30px;
+                width: 30px;
+            }
+            
+            #fixed {
+              position: fixed;
+              bottom: 10px;
+              right: 300px;
+              /*width: 20px;*/
+              /*height: 20px;*/
+        }
+           
         </style>
         <title> Day One HTML </title>
     </head>
     <body>
         <main>
-            <header>Header</header>
-                <div class ="flex-container">
+            <header><img src = "/s2019cst336s2/Examples/supportHands.jpg" /></header>
+                <div class =".content">
                     <section>
-                         <search>Search</search>
-                         <article>Article</article>
+                        <!--<buton></buton>-->
+                         <search>
+                             <input type = "text" />
+                            <button> <img id = "search" src = "/s2019cst336s2/Examples/searchImage.png"/></button>
+                         </search>
+                         <article>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                        </article>
+                        <button id = "fixed"> <img src = "/s2019cst336s2/Examples/helpImage.png"/></button>
+                        
                      </section>
                 </div>
                 
             <aside>Aside</aside>
-            <footer>footer </footer>
+            <footer>&copy; 2019, Luis Alva</footer>
           </main>
         
         
