@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Day One </title>
+    </head>
+    
+    <script type="text/javascript" >
+        
+        function addBorder(){
+            document.getElementById("myImage").style.border = "solid 1px red";
+        }
+        function replaceHeaderContent(){
+            document.getElementById("headerContent").innerHTML="COOL!"; 
+        }
+    </script>
+    <body>
+        <h3 onclick="addBorder()"> Click here to add a border to an image</h3>
+        <img id="myImage" src="/s2019cst336s2/Examples/helpImage.png" />
+        
+        <h3 id = "headerContent">Click on the image to change this line</h3>
+        <img src="/s2019cst336s2/Examples/helpImage.png" onclick="replaceHeaderContent()"/>
+        
+        
+
+    </body>
+</html>
