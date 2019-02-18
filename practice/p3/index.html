@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slot Machine</title>
+         <link href = "styles.css"  rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1 id = "mainheader">Slot Machine</h1>
+        <div class = "centerbutton">
+        <button type = "button" id = "play">Play!</button>
+        </div>
+        <div id = "flex">
+        <div id = "image1"></div>
+        <div id = "image2"></div>
+        <div id = "image3"></div>
+        </div>
+    
+         <div id ="jackpot"></div>
+        <div id = "results"></div>
+        <div id = "won"></div>
+        
+        <div id= "lose"></div>
+        
+        
+        <script>
+            /* global $ */
+            var winnings = 0; 
+            
+            $( "#play" ).click(function() {
+            let imageArray = ["cherry", "grapes", "seven"];
+            let randomIndex1 = Math.floor(Math.random() * 3);
+            let randomIndex2 = Math.floor(Math.random() * 3);
+            let randomIndex3 = Math.floor(Math.random() * 3);
+            let randomImage1 = imageArray[randomIndex1];
+            let randomImage2 = imageArray[randomIndex2];
+            let randomImage3 = imageArray[randomIndex3];
+            
+            $("#image1").html("<img src = 'img/" + randomImage1 + ".png'/>");
+            $("#image2").html("<img src = 'img/" + randomImage2 + ".png'/>");
+            $("#image3").html("<img src = 'img/" + randomImage3 + ".png'/>");
+            
+                
+            if(randomIndex1 == randomIndex2 && randomIndex2 == randomIndex3){
+                if(randomIndex1 == 0){
+                    // $("won").html("You won!");
+                    winnings += 100;
+                    $("#jackpot").html("<h1>J A C K P O T</h1>");
+                    $("#results").html("<h1>Your winnings is $100!</h1>");
+                    $("#won").html("<h1>Your total winnings is $" + winnings + "</h1>");
+                    $("#lose").html(""); 
+                    
+                }else if(randomIndex2 ==1){
+                    // $("won").html("You won!");
+                    winnings += 300;
+                    $("#jackpot").html("<h1>J A C K P O T</h1>");
+                    $("#results").html("<h1>Your winnings is $300!</h1>");
+                     $("#won").html("<h1>Your total winnings is $" + winnings + "</h1>");
+                     $("#lose").html("");
+                    
+                }else {
+                    winnings +=500; 
+                    // $("won").html("You won!");
+                     $("#jackpot").html("<h1>J A C K P O T</h1>");
+                     $("#results").html("<h1>Your winnings is $500!</h1>");
+                     $("#won").html("<h1>Your total winnings is $" + winnings + "</h1>");
+                     $("#lose").html("");
+               
+                }
+            }else{
+                // $("jackpot").html(""); 
+                $("#won").html("");
+                $("#lose").html("<h1>You lost! Try Again!</h1>");
+                $("#results").html("<h1>Your total winnings $" + winnings + "</h1>");
+                //  $("#results").html("<h1>Your total winnings is $" + winnings + "</h1>");
+            }
+            
+            });
+            
+            
+        </script>
+
+    </body>
+</html>

@@ -53,6 +53,7 @@ function checkGuess() {
     guessField.value = '';
     guessField.focus();
 }
+
 guessSubmit.addEventListener('click', checkGuess);
 
 function setGameOver() {
@@ -77,6 +78,6 @@ function resetGame() {
     lastResult.style.backgroundColor = 'white';
     randomNum = Math.floor(Math.random() * 99) + 1;
 
-}
+    }
 
 })
