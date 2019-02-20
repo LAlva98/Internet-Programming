@@ -2,8 +2,9 @@ $( "#sub1" ).click(function() {
     
     $("#content").hide();
     $("#sub2").show(); 
+    $("#resultPage").empty(); 
     $("#resultPage").show();
-    // $("#content").empty(); 
+    // $("#resultPage").empty(); 
     
     var q1 = $("#q1").val(); 
     console.log(q1); 
@@ -34,7 +35,7 @@ $( "#sub1" ).click(function() {
     if(q1 == "Meridian" || q1 == "meridian" || q1 == "meridians" || q1=="Meridians"){
         $("#resultPage").html("<h1>You got the first question correct!</h1>");
     }else{
-        $("#resultPage").append("<h1>You got the first question wrong. </h1>");
+        $("#resultPage").html("<h1>You got the first question wrong. </h1>");
     }
     
     if(q2 == "Amphibians"){
