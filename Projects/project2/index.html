@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Survey </title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Let me get to know you!</h1>
+        <!--<p id="label1">What are you looking for?</p>-->
+
+        <p id="label1">What is your name?</p>
+        <form id="form1">
+            First name:<br>
+            <input id="firstName" type="text" name="firstname"> <br>Last name:<br>
+            <input id="lastName" type="text" name="lastname">
+        </form>
+        <br>
+
+        <p id="label1">What is your highest level of education?</p>
+
+        <form id="form1">
+            <!--<div>-->
+                <input type="radio" name="education" value = "1" id = "a1">
+                <label for = "a1">High School Diploma</label>
+            <!--</div>-->
+            <!--<div>-->
+                <input type="radio" name="education" value = "2" id = "a2">
+                <label for = "a2">Bachelors</label>
+            <!--</div>-->
+            <!--<div>-->
+                <input type="radio" name="education" value = "3" id = "a3">
+                <label for = "a3">Graduate School</label>
+            <!--</div>-->
+            <!--<div>-->
+                <input type="radio" name="education" value = "4" id = "a4">
+                <label for = "a4">Other</label>
+            <!--</div>-->
+
+        </form>
+
+        <p id="label1">What do you use to get around?</p>
+        <form id="form1">
+            <input type="radio" name="transportation" value="Car">Vehicle<br>
+            <input type="radio" name="transportation" value="Walk"> Walk<br>
+            <input type="radio" name="transportation" value="Bike"> Bike<br>
+            <input type="radio" name="transportation" value="Another"> Another<br>
+        </form>
+
+        <p id="label1">What mood are you in? </p>
+
+        <form id="form1">
+            <select name="cars" id="myselect">
+                <option value="angry">Angry</option>
+                <option value="sad">Sad</option>
+                <option value="neutral">Neutral</option>
+                <option value="happy">Happy</option>
+          </select>
+        </form>
+
+        <p id="label1">What is a hobby of yours?</p>
+        <form id="form1">
+            Hobby:<br>
+            <input type="text" name="hobby" id="hobby">
+        </form>
+
+        <p id="label1">What is your favorite type of food?</p>
+        <form id="form1">
+            <div>
+                <input type="radio" name="food" value = "1f" id = "f1">
+                <label for = "f1">Mexican</label>
+            </div>
+            <div>
+                <input type="radio" name="food" value = "2f" id = "f2">
+                <label for = "f2">Chinese</label>
+            </div>
+            <div>
+                <input type="radio" name="food" value = "3f" id = "f3">
+                <label for = "f3">Japanese</label>
+            </div>
+            <div>
+                <input type="radio" name="food" value = "4f" id = "f4">
+                <label for = "f4">Italian</label>
+            </div>
+            <div>
+                <input type="radio" name="food" value = "5f" id = "f5">
+                <label for = "f5">American</label>
+            </div>
+            <div>
+                <input type="radio" name="food" value = "6f" id = "f6">
+                <label for = "f6">Korean</label>
+            </div>
+            <div>
+                <input type="radio" name="food" value = "7f" id = "f7">
+                <label for = "f7"> I love all food!</label>
+            </div>
+        </form>
+
+        <div id="sub">
+            <input id="sub1" type="button" value="Submit My Information!" />
+        </div>
+        
+    </div>
+     <div id="resultPage">
+                
+    </div>
+
+
+
+
+
+
+
+    <script src="functions.js"></script>
+
+
+</body>
+
+</html>

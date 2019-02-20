@@ -17,10 +17,11 @@
         </div>
     
          <div id ="jackpot"></div>
-        <div id = "results"></div>
+        <!--<div id = "results"></div>-->
         <div id = "won"></div>
         
         <div id= "lose"></div>
+        <div id = "results"></div>
         
         
         <script>
@@ -70,6 +71,7 @@
             }else{
                 // $("jackpot").html(""); 
                 $("#won").html("");
+                $("#jackpot").html("");
                 $("#lose").html("<h1>You lost! Try Again!</h1>");
                 $("#results").html("<h1>Your total winnings $" + winnings + "</h1>");
                 //  $("#results").html("<h1>Your total winnings is $" + winnings + "</h1>");
