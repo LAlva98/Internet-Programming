@@ -2,7 +2,7 @@ $( "#sub1" ).click(function() {
     
     $("#content").hide();
     $("#sub2").show(); 
-    $("#resultPage").empty(); 
+
     $("#resultPage").show();
     // $("#resultPage").empty(); 
     
@@ -78,7 +78,8 @@ $( "#sub1" ).click(function() {
     $("#sub2").click(function(){
         $("#content").show(); 
         $("#sub2").hide(); 
-        $("#resultPage").hide(); 
+        $("#resultPage").hide();
+        $("#resultPage").empty(); 
     }); 
     
 });
