@@ -1,0 +1,63 @@
+h1{
+    text-align: center; 
+    font-size: 2em;
+    font-weight: 600; 
+    font-family: oblique; 
+    font-stretch: condensed; 
+    font-size-adjust: none; 
+}
+
+
+#label1{
+    text-align: center; 
+}
+
+#sub{
+    /*justify-content: center;*/
+    text-align: center;
+    padding-top: 10px; 
+}
+
+#form1{
+    justify-content: center;
+    text-align: center; 
+    
+}
+
+#sub1{
+
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+#sub2{
+    
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    justify-content:center;
+    /*text-align: center; */
+}
+
+#sub3{
+    
+    text-align: center;
+    padding-top: 10px; 
+    
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Survey </title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Are You Smarter Than a 5th Grader?</h1>
+        <!--<p id="label1">What are you looking for?</p>-->
+
+        <p id="label1">1) Imaginary lines traversing the globe from pole to pole are called...</p>
+        <form id="form1">
+            Answer:<br>
+            <input id="q1" type="text" name="q1"> <br>
+        </form>
+        
+
+        <p id="label1">2) What species can live on both water and land?</p>
+
+        <form id="form1">
+            <!--<div>-->
+                <input type="radio" name="q2" value = "correct" id = "a1">
+                <label for = "a1">Amphibians</label>
+            <!--</div>-->
+            <!--<div>-->
+                <input type="radio" name="q2" value = "wrong0" id = "a2">
+                <label for = "a2">Mammals</label>
+            <!--</div>-->
+            <!--<div>-->
+                <input type="radio" name="q2" value = "wrong1" id = "a3">
+                <label for = "a3">Reptiles</label>
+            <!--</div>-->
+            <!--<div>-->
+                <input type="radio" name="q2" value = "wrong2" id = "a4">
+                <label for = "a4">Arthropods</label>
+            <!--</div>-->
+
+        </form>
+
+        <p id="label1">3) You collect 48 pieces of Halloween candy. Your parents say you can eat 2 pieces per day, plus an extra piece on Saturdays and Sundays. How many weeks will it take to finish all of your candy?</p>
+        <form id="form1">
+            <input type="radio" name="q3" value="correct">3 Weeks<br>
+            <input type="radio" name="q3" value="wrong1"> 2 Weeks<br>
+            <input type="radio" name="q3" value="wron2"> 2 week and 3 Days<br>
+            <input type="radio" name="q3" value="wrong3"> 2 Weeks and 6 Days<br>
+        </form>
+
+        <p id="label1">How long is one regular term for a U.S. Representative?   </p>
+
+        <form id="form1">
+            <select name="q4" id="myselect">
+                <option value= "holder" selected="selected">...</option>
+                <option value="correct">2</option>
+                <option value="wrong1">3</option>
+                <option value="wrong2">4</option>
+                <option value="wrong3">6</option>
+          </select>
+        </form>
+
+        <p id="label1">What is the lowest prime number?</p>
+        <form id="form1">
+            Number:<br>
+            <input type="text" name="prime" id="prime">
+        </form>
+
+        <p id="label1">Which one of the following states is NOT part of the Four Corners?  </p>
+        <form id="form1">
+            <div>
+                <input type="radio" name="geo" value = "1f" id = "f1">
+                <label for = "f1"> New Mexico</label>
+            </div>
+            <div>
+                <input type="radio" name="geo" value = "2f" id = "f2">
+                <label for = "f2">Utah</label>
+            </div>
+            <div>
+                <input type="radio" name="geo" value = "3f" id = "f3">
+                <label for = "f3">Colorado</label>
+            </div>
+            <div>
+                <input type="radio" name="geo" value = "4f" id = "f4">
+                <label for = "f4">Nevada</label>
+            </div>
+            <div>
+                <input type="radio" name="geo" value = "5f" id = "f5">
+                <label for = "f5">Arizona</label>
+            </div>
+        </form>
+
+        <div id="sub">
+            <input id="sub1" type="button" value="Submit Quiz!" />
+        </div>
+        
+    </div>
+     <div id="resultPage">
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
