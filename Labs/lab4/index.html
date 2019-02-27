@@ -1,9 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> </title>
-    </head>
-    <body>
 
-    </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>AJAX: Sign Up Page</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+
+</head>
+
+<body id="dummybodyid">
+  <h1> Sign Up Form </h1>
+
+  <form>
+    <fieldset>
+      <legend>Sign Up</legend>
+      <div><label>First Name:</label><input type="text"></div>
+      <div><label>Last Name:</label><input type="text"></div>
+      <div><label>Email:</label><input type="text"></div>
+      <div><label>Phone Number:</label><input type="text"></div>
+      <div><label>Zip Code:</label><input type="text" id = "zip"><span id = "valid"></span></div>
+      <div><label>City:</label><span id = "city"></span></div>
+      <div><label>Latitude:</label><span id = "latitude"></span></div>
+      <div><label>Longitude:</label><span id = "longitude"></span></div>
+      <div><label>State:</label><input type="text" id = "state"><span id = "stateValid"></span></div>
+      <div><label>Select a County:</label><select id = "counties"></select></div>
+      <div><label>Desired Username:</label><input type="text" id = "userName"><span id = "userValid"></span></div>
+      <div><label>Password:</label><input type="password" id = "first"></div>
+      <div><label>Type Password Again:</label><input type="password" id = "second"></div>
+      <div id = "passValid"></div>
+      <div><button type = button class = "checker">Sign Up!</button></div>
+    </fieldset>
+  </form>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+      $("#zip").on("input", function() {
+        $.ajax({
+        type: "GET",
+        url: `http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php`,
+        dataType: "json",
+        data: {
+          "zip": $(this).val(),
+          
+        },
+          success: function(data) {
+            
+            if(data == false){
+              $("#valid").empty();
+              $("#valid").append("Not Valid");
+              
+            }else{
+              $("#valid").empty();
+              $("#city").empty();
+              $("#latitude").empty();
+              $("#longitude").empty();
+            
+              $("#city").append(data[1]);
+              $("#latitude").append(data[5]);
+              $("#longitude").append(data[6]);
+            }
+            
+          },
+          complete: function(data,status) { //optional, used for debugging purposes
+          }
+        
+        
+      })
+      });
+      $("#state").on("input", function(){
+        
+        $.ajax({
+          type: "GET",
+          url: `http://itcdland.csumb.edu/~milara/ajax/countyList.php`,
+          dataType: "json",
+          data: {
+          "state": $(this).val(),
+          
+        },
+          success: function(data) {
+            console.log(data);
+            if(data == false){
+              $("#stateValid").empty();
+              $("#stateValid").append("Not Valid");
+              
+            }else{
+              $("#stateValid").empty();
+              for (var i in data) {
+                $("#counties").append('<option value=1>' + data[i].county + '</option>');
+              }
+            }
+            
+          },
+          complete: function(data,status) { //optional, used for debugging purposes
+          }
+          
+        })
+      });
+      var userName = ["userName"];
+      $("#userName").on("input",function(){
+        for(var i in userName){
+          if(userName[i] === $("#userName").val()){
+            $("#userValid").empty();
+            $("#userName").css("color", "red");
+            $("#userValid").append(" Username is taken");
+            $("#userValid").css("color","red");
+            return;
+          }
+        }
+        $("#userValid").empty();
+        $("#userName").css("color", "green");
+        })
+      $("button.checker").on("click", function(){
+        
+        
+        if($("#first").val() != $("#second").val()){
+          $("#passValid").empty();
+          $("#passValid").append("Password does not match.");
+          $("#passValid").css("color","red");
+        }else{
+          userName.push($("#userName").val());
+          $("#userName").val("");
+          $("#passValid").empty();
+          $("#first").val("");
+          $("#second").val("");
+          $("#passValid").append("Success");
+          $("#passValid").css("color","green");
+          
+        }
+      });
+      
+  </script>
+</body>
+
 </html>
