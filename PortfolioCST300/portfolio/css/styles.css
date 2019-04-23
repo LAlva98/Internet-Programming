@@ -1,0 +1,59 @@
+    header, main, nav, footer{
+        text-align:center;
+    
+    }
+    
+    nav a{
+        padding: 15px;
+        padding-bottom:4px;
+        font-size:1.8em;
+        text-decoration: none;
+        color:black;
+        
+    }
+    
+    nav a:hover{
+        border-bottom:2px;
+        font-size:2em;
+        transition:.9s;
+    }
+    
+    
+    figure, div {
+      float: left;
+    }
+    
+    #me, #welcomeText{
+        float:left;
+    }
+    footer{
+        clear:left;
+    }
+    
+        
+    table {
+        margin: 0px auto;
+    }
+    
+    td{
+        padding-right: 10px;
+        font-size: 1.3em;
+    }
+    
+    p{
+        font-size: 1.3em;
+    }
+    
+    ul{
+        text-align: left;
+        padding-left: 200px;
+    }
+    /*.hobby{*/
+    /*    color: #9900cc;*/
+    /*}*/
+    body{
+        /*background-color: #66ccff; */
+    }
+   
+    
+ 

@@ -1,2 +1,8 @@
 [26-Feb-2019 00:48:47 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/s2019cst336s2/Examples/PHPE1.php on line 25
 [26-Feb-2019 00:48:48 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/s2019cst336s2/Examples/PHPE1.php on line 25
+[16-Apr-2019 00:04:37 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/ubuntu/workspace/s2019cst336s2/Examples/curl.php on line 61
+[16-Apr-2019 00:04:37 UTC] PHP Stack trace:
+[16-Apr-2019 00:04:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336s2/Examples/curl.php:0
+[16-Apr-2019 00:04:38 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/ubuntu/workspace/s2019cst336s2/Examples/curl.php on line 61
+[16-Apr-2019 00:04:38 UTC] PHP Stack trace:
+[16-Apr-2019 00:04:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336s2/Examples/curl.php:0

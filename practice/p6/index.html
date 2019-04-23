@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <h2>Shopping Cart</h2>
+    <div id="centering">
+        <table id="tables">
+            <tr>
+                <th>Product</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td id="product"></td>
+                <td id="unitPrice"></td>
+                <td><input></td>
+                <td id="total"></td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td></td>
+                <td id ="discounted"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tax(10%)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Subtotal</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id="promoting">
+        Promo Code:<input type="text" name="promoCode" id="promocode" />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            type: "get",
+            url: "getRandomProduct.php",
+            dataType: "json",
+            data: {},
+
+            success: function(data) {
+                console.log(data);
+                $("#product").append(data["product"]);
+                $("#unitPrice").append("$" + data["price"]);
+            }
+
+        })
+
+        $("#promocode").on("input", function() {
+
+            $.ajax({
+                type: "get",
+                url: "applyPromoCode.php",
+                dataType: "json",
+                data: {},
+
+                success: function(data) {
+                    // console.log(data);
+                    for(i in data){
+                        if($("#promocode").val() == i){
+                            $("#discounted").empty(); 
+                            $("#discounted").append(data[i] *100 +"%"); 
+                        }
+                    }
+                }
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>

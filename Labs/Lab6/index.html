@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 6</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div>
+            <h1>Otter Mart Product Search</h1>
+            <div>
+                <div>Product: <input type="text" id="product"/></div>
+                
+                <div>Category: 
+                    <select id = category>
+                        <option value = ""> Options </option>
+                    </select>
+                </div>
+                
+                <div>Price: From <input type="text" id="from"/> To <input type="text" id="to"/></div>
+                
+                <div>Order result by:
+                    <div><input type="radio" name="orderBy" value = "price"/>Price</div>
+                    <div><input type="radio" name="orderBy" value = "name"/>Name</div>
+                </div>
+                
+            <button id = "searchForm">Search</button>
+            
+            <hr>
+            
+            <div id = "results"></div>
+            
+            <div class = "modal" tabindex="-1" role = "dialog" id="purchaseHistoryModal">
+                <div class = "modal-dialog" role ="document">
+                    <div class = "modal-content">
+                        <div class = "modal-header">
+                            <h5 class = "modal-title">Purchase History</h5>
+                            <button type ="button" class = "close" data-dismiss="modal" aria-label = "Close">
+                                <span aria-hidden = "true">&times;</span>
+                            </button>
+                        </div>
+                        <div class = "modal-body">
+                            <div id="history"></div>
+                        </div>
+                        <div class = "modal-footer">
+                            <button type = "button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type = "button" class ="btn btn-primary"> Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script type="text/javascript" src="js/functions.js"></script>
+        </div>
+    </body>
+</html>

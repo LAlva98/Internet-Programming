@@ -1,0 +1,17 @@
+$.ajax({
+    type: "GET",
+    url: "endpoint.php",
+    dataType: "json",
+    data: {},
+    success: function(data) {
+        console.log(data);
+    },
+    error: function(err) {
+        console.log("Houston, we have a problem!")
+        console.log(arguments);
+    },
+    complete: function(data, status) {
+        // Called whether success or error
+        //console.log(status);
+    }
+});
