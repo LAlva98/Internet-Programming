@@ -29,6 +29,9 @@
     footer{
         clear:left;
     }
+    #aboutpage{
+        padding-left: 100px;
+    }
     
         
     table {
@@ -53,6 +56,10 @@
     /*}*/
     body{
         /*background-color: #66ccff; */
+    }
+    
+    #centeringimages{
+        padding-left: 50px;
     }
    
     
