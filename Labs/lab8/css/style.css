@@ -1,0 +1,17 @@
+#temp{
+    width: 400px;
+    height: auto;
+}
+#flex{
+    display: flex;
+}
+#flex1{
+    display: flex;
+}
+#flex2{
+    display: flex;
+}
+#imgBtn{
+    width: 100px;
+    height: 93px;
+}

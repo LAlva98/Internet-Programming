@@ -1,0 +1,12 @@
+[24-Apr-2019 00:42:13 UTC] PHP Warning:  Illegal string offset 'previewURL' in /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php on line 29
+[24-Apr-2019 00:42:13 UTC] PHP Stack trace:
+[24-Apr-2019 00:42:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php:0
+[24-Apr-2019 00:42:27 UTC] PHP Warning:  Illegal string offset 'previewURL' in /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php on line 29
+[24-Apr-2019 00:42:27 UTC] PHP Stack trace:
+[24-Apr-2019 00:42:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php:0
+[24-Apr-2019 00:45:30 UTC] PHP Warning:  Illegal string offset 'hits' in /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php on line 29
+[24-Apr-2019 00:45:30 UTC] PHP Stack trace:
+[24-Apr-2019 00:45:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php:0
+[24-Apr-2019 00:51:38 UTC] PHP Warning:  Illegal string offset 'hits' in /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php on line 29
+[24-Apr-2019 00:51:38 UTC] PHP Stack trace:
+[24-Apr-2019 00:51:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lykos/Labs/lab8/api/pixa.php:0
