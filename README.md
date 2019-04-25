@@ -1,2 +1,2 @@
 # Recorded code for my time with Internet Programming
-Always building on it
+Used this code for coursework and some side projects all together. 
