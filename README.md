@@ -1,2 +1,2 @@
-# s2019cst336s2
-Coursework for spring semester CST336.
+# Recorded code for my time with Internet Programming
+Always building on it
